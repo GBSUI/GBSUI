@@ -1,0 +1,7 @@
+root = true
+[*]
+end_of_line = crlf
+[*.{ts, tsx, jsx, js}]
+charset = utf-8
+ident_style = tab
+indent_size = 4

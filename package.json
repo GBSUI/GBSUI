@@ -1,0 +1,53 @@
+{
+  "name": "gbs-ui",
+  "version": "1.0.0",
+  "description": "A React UI library for developers looking for a good user experience aligned with code quality.",
+  "main": "dist/cjs/index.ts",
+  "module": "dist/esm/index.ts",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbsui/gbs-ui.git"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "input",
+    "button"
+  ],
+  "author": "@gabertotti <https://www.linkedin.com/in/gabrielbmmichels> & @gabrists <https://www.linkedin.com/in/gabriel-santos-gasan/>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gbsui/gbs-ui/issues"
+  },
+  "homepage": "https://github.com/gbsui/gbs-ui#readme",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@types/node": "^20.3.1",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@types/react-helmet": "^6.1.6",
+    "@types/react-lottie": "^1.2.6",
+    "@types/styled-components": "^5.1.26",
+    "@types/uuid": "^9.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "react": "^18.2.0",
+    "rollup": "^3.25.1",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3"
+  }
+}
