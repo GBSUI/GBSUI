@@ -30,8 +30,8 @@ export const useFetch = () => {
             headers: requestHeaders,
             body: data? JSON.stringify(data) : undefined
         });
-
-        let body = await response.json();
+        
+        const body = await response.json();
 
         let apiStatus: IApiStatus = {
             status: response.status,
