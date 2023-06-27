@@ -1,7 +1,7 @@
 {
   "name": "gg-tools",
-  "version": "1.0.2",
-  "description": "React library with tools that can make your day easier",
+  "version": "1.0.0",
+  "description": "GG Tools is a collection of utility functions and hooks for React applications. It aims to provide reusable and helpful tools to streamline the development process and improve productivity.",
   "main": "dist/cjs/index.ts",
   "module": "dist/esm/index.ts",
   "files": [

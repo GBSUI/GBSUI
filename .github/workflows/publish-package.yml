@@ -1,13 +1,12 @@
-name: Publish Package to npmjs
+name: Publish Package
 
 on:
   release:
     types:
-      - [created]
-      
+      - created
+
 jobs:
   build:
-  
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
@@ -16,18 +15,19 @@ jobs:
     runs-on: ${{matrix.os}}
     
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Use Node.js ${{matrix.node_version}}
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: ${{matrix.node_version}}
           registry-url: 'https://registry.npmjs.org'
 
-      - name: npm ci
-        run: npm ci
+      - name: Install dependencies
+        run:  npm install --legacy-peer-deps --force
 
-      - name: npm publish
+      - name: Publish to npm
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
