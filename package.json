@@ -1,6 +1,6 @@
 {
   "name": "gg-tools",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "React library with tools that can make your day easier",
   "main": "dist/cjs/index.ts",
   "module": "dist/esm/index.ts",
