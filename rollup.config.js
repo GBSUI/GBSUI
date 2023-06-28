@@ -25,7 +25,8 @@ export default [
             resolve(),
             commonjs(),
             typescript( {
-                tsconfig: "./tsconfig.json"
+                tsconfig: "./tsconfig.json",
+                exclude: ["**/*.test.ts", "./jest.config.ts"]
             }),
             polyfills(),
             json(),
@@ -34,9 +35,11 @@ export default [
         external: [
             "react",
             "react-dom",
-            "react-router-dom",
+            "react-helmet",
+            "react-lottie",
+            "tslib",
+            "typescript",
             "styled-components",
-            "canvas"
         ]
     },
     {
