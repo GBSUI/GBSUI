@@ -1,0 +1,36 @@
+name: Publish
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows-latest]
+        node_version: [20.x]
+
+    runs-on: ${{matrix.os}}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{matrix.node_version}}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{matrix.node_version}}
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run:  npm install --legacy-peer-deps --force
+
+      - name: Build package
+        run: npm run build
+
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}

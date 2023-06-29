@@ -1,0 +1,74 @@
+{
+  "name": "@gg-react/gg-tools",
+  "version": "1.0.0",
+  "description": "GG Tools is a collection of utility functions and hooks for React applications. It aims to provide reusable and helpful tools to streamline the development process and improve productivity.",
+  "main": "lib/cjs/index.ts",
+  "module": "lib/esm/index.ts",
+  "files": [
+    "lib"
+  ],
+  "type": "module",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "commit": "git-cz",
+    "test": "jest"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gg-react/gg-tools.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "react hooks",
+    "tools",
+    "react tools",
+    "fetch",
+    "useFetch"
+  ],
+  "author": "@gabertotti <https://www.linkedin.com/in/gabrielbmmichels>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gg-react/gg-tools/issues"
+  },
+  "homepage": "https://github.com/gg-react/gg-tools#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.0",
+    "typescript": "^5.1.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@types/styled-components": "^5.1.26",
+    "@types/uuid": "^9.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.0",
+    "jest": "^29.5.0",
+    "jest-junit": "^16.0.0",
+    "rollup": "^3.25.1",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.3"
+  }
+}
